@@ -5,5 +5,6 @@
         <page name='MoLab Icon'/>
         <page name='MoLab App Icon'/>
         <page name='App Icon'/>
+        <page name='Wallet'/>
     </pages>
 </playground>

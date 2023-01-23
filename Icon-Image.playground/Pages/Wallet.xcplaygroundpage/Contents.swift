@@ -1,3 +1,8 @@
+
+// https://recreatecode.com/
+// Wallet example
+// - animationed credit card display front and back
+
 import SwiftUI
 import PlaygroundSupport
 
@@ -38,7 +43,7 @@ class Wallet: ObservableObject {
     
     func tapCard(card: Card) {
         // when you tap on a card in the wallet
-        let tappedCardIndex = cards.index { $0.id == card.id }!
+        let tappedCardIndex = cards.firstIndex { $0.id == card.id }!
         var cardPadding = spacing
         
         // restore cards to their original positions
@@ -217,7 +222,7 @@ struct CardView: View {
                 .shadow(color: Color(UIColor.white.withAlphaComponent(0.12)), radius: 0.5, x: 0, y: 1)
             
         )
-            .shadow(color: Color(UIColor.black.withAlphaComponent(0.12)), radius: 16, x: 0, y: 8)
+        .shadow(color: Color(UIColor.black.withAlphaComponent(0.12)), radius: 16, x: 0, y: 8)
     }
 }
 
@@ -253,3 +258,5 @@ extension View {
 }
 
 PlaygroundPage.current.setLiveView(WalletView(wallet: Wallet()))
+
+// https://recreatecode.com/

@@ -29,6 +29,7 @@ PlaygroundPage.current.setLiveView(
 
 // https://github.com/mobilelabclass-itp/02-Icon-Image
 
+// Source:
 // https://recreatecode.com/
 // https://gist.github.com/jordansinger/4d77f1b44223417ec2243c430da089af
 // AppleLogo.swift

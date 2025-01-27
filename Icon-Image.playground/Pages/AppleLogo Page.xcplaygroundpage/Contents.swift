@@ -27,7 +27,7 @@ PlaygroundPage.current.setLiveView(
     .frame(width: 375, height: 812)
 )
 
-// https://github.com/mobilelabclass-itp/02-Icon-Image
+// https://github.com/molab-itp/02-Icon-Image
 
 // Source:
 // https://recreatecode.com/

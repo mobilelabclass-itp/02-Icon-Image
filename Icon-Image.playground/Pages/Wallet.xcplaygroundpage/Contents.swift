@@ -6,6 +6,30 @@
 import SwiftUI
 import PlaygroundSupport
 
+class Card: ObservableObject, Identifiable {
+  var id = UUID()
+  var last4: String = "9999"
+  var tapped = false
+  @Published var flipped = false
+  @Published var backgroundColor: Color
+  @Published var yOffset: CGFloat
+  
+  init(backgroundColor: Color, yOffset: CGFloat) {
+    self.backgroundColor = backgroundColor
+    self.yOffset = yOffset
+    self.last4 = randomNumber(digits: 4)
+  }
+  
+  func randomNumber(digits: Int) -> String {
+    // generate random last 4 digits
+    var number = String()
+    for _ in 1...digits {
+      number += "\(Int.random(in: 1...9))"
+    }
+    return number
+  }
+}
+
 // constants
 let cardWidth: CGFloat = 343
 let cardHeight: CGFloat = 212
@@ -83,30 +107,6 @@ class Wallet: ObservableObject {
             }
         }
         
-    }
-}
-
-class Card: ObservableObject, Identifiable {
-    var id = UUID()
-    var last4: String = "9999"
-    var tapped = false
-    @Published var flipped = false
-    @Published var backgroundColor: Color
-    @Published var yOffset: CGFloat
-    
-    init(backgroundColor: Color, yOffset: CGFloat) {
-        self.backgroundColor = backgroundColor
-        self.yOffset = yOffset
-        self.last4 = randomNumber(digits: 4)
-    }
-    
-    func randomNumber(digits: Int) -> String {
-        // generate random last 4 digits
-        var number = String()
-        for _ in 1...digits {
-            number += "\(Int.random(in: 1...9))"
-        }
-        return number
     }
 }
 
